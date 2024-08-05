@@ -8,7 +8,7 @@ function ResturantCard(props) {
       name,
       cuisines,
       avgRatingString,
-      deliveryTime
+      // deliveryTime
     } = resData?.data; //optional chaining
   
     return (
@@ -18,7 +18,7 @@ function ResturantCard(props) {
         <h3>{name}</h3>
         <h4>{cuisines.join(",")}</h4>
         <h4>{avgRatingString}</h4>
-        <h4>{resData.data.sla.deliveryTime} min</h4>
+        {/* <h4>{resData.data.sla.deliveryTime} min</h4> */}
       </div>
     )
 }

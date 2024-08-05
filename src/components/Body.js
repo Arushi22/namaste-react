@@ -1,16 +1,19 @@
 import React from 'react';
 import ResturantCard from './ResturantCard';
-//import resList from '../utils/mockData';
+import { useState } from 'react';
+import resList from '../utils/mockData';
 
 function Body() {
-
-  const listOfResturant = [];
+  const[listOfResturant, setlListOfResturant] = useState(resList);
 
   return (
     <div className="body">
       <div className="filter">
         <button className='filter-btn' onClick={()=>{
-          console.log("Button clicked")
+          const filteredList = listOfResturant.filter(
+            res=> res.data.avgRatingString>4
+          );
+          setlListOfResturant(filteredList);
         }}>
           Top Rated resturants
         </button>
