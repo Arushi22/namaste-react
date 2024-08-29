@@ -1,7 +1,7 @@
-  import React from 'react'
+  import React from 'react';
+  import CDN_URL from "../utils/constants";
 
   const ResturantCard = (props) => {  
-     console.log("hey",props);
     const {resData} = props; 
 
     const {
@@ -10,10 +10,8 @@
       cuisines,
       avgRating,
       sla
-    } =   resData?.data || {}; //optional chaining
+    } =   resData?.info; //optional chaining
    
-      
-    console.log(resData)
       return (
         <div className="res-card">
           
